@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script type="text/javascript">
+
+		//First we check that we never created a cookie before
+		if( !document.cookie ) {
+			var date = new Date();
+			date.SetFullYear( date.GetFullYear() + 1 );
+			document.write( "The expiration date is" + date + "<br/>");
+
+			document.cookie = "week1Ch9" + "; " + "numberVisits=1" + "; expires=" + date.toUTCString();
+			document.write( "Welcome - This is the first time you are visiting this webpage <br/>");
+		} else { //We have already created a cookie for this page
+			var CookieString = decodeURIComponent( document.cookie );
+			document.write( "The value of the cookie is = " + CookieString + "<br/>" );
+			var arrayData = CookieString.split ( "; " );
+			var numElements = arrayData.length;
+			document.write( "The number of tokens inside the cookie is = " + numElements + "<br/>")
+		}
+	</script>
+</body>
+</html>
