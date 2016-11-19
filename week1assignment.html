@@ -12,7 +12,7 @@
 			date.setFullYear( date.getFullYear() + 1 );
 			document.write( "The expiration date is" + date + "<br/>");
 
-			document.cookie = "week1Ch9" + "; numberVisits=1" + "; expires=" + date.toUTCString();
+			document.cookie = "week1Ch9" + "; " + "numberVisits=1" + "; " + "expires=" + date.toUTCString();
 			document.write( "Welcome - This is the first time you are visiting this webpage <br/>");
 		} 
 		else { //We have already created a cookie for this page
