@@ -6,8 +6,41 @@
 		var g_new_window = ( -1 );
 		function generate_table()
 		{
-			window.alert("Hey I am running");
-			
+			// In the following lines, I capture the values of the 2
+			// inputs I selected, and then display those inputs with
+			// window.alert
+			//window.alert( "call me" );
+			var operation_selection = document.theForm.selection_menu.value;
+			var selected_number = document.theForm.selected_number.value;
+			var i = 1;
+			var i2Str = i.toString();
+			var expr = selected_number + operation_selection + i2Str;
+			var res = eval( expr );
+			window.alert( expr + " is equal to" + res );
+
+			// window.alert("Hey I am running");
+			g_new_window = window.open( "", "", "", "" );
+
+			// How to write to the new window:
+			g_new_window.document.write( "This belongs to the second page<br/>" );
+
+			// this.style.backgroundColor = "black";
+			// if we want to wipe out the content of the 2nd window brfore writing to it,
+			// let's do this instead
+			g_new_window.document.open();
+			g_new_window.document.write( "This should replace the 1st content of our second page" );
+			g_new_window.document.write( "<table>" );
+			g_new_window.document.write( "	<tr>" );
+			g_new_window.document.write( "		<td>1</td>" );
+			g_new_window.document.write( "		<td>2</td>" );
+			g_new_window.document.write( "		<td>3</td>" );
+			g_new_window.document.write( "	</tr>" );
+			g_new_window.document.write( "	<tr>" );
+			g_new_window.document.write( "		<td>4</td>" );
+			g_new_window.document.write( "		<td>5</td>" );
+			g_new_window.document.write( "		<td>6</td>" );
+			g_new_window.document.write( "	</tr>" );
+			g_new_window.document.write( "</table>" );
 		}
 	</script>
 </head>
@@ -24,35 +57,9 @@
 
 	</form>
 
-
-	<!-- <script type="text/javascript">
-	//This is how to write to the first page:
-	document.write( "This belongs to the first page");
-	//How to create a new window:
-	g_new_window = window.open( "", "", "", "" );
-
-	//How to write to the new window:
-	g_new_window.document.write( "This belongs to the second page");
-	//this.style.backgroundColor = "black";
-
-	//If we want to wipe out the content of the 2nd window before writing to it,
-	//lets do this instead:
-	g_new_window.document.open();
-	
-	g_new_window.document.write( "This should replace our 1st content of our second page");
-	//Let us learn how to generate a 2*3 table
-			g_new_window.document.write( "<table>" );
-			g_new_window.document.write( "	<tr>" );
-			g_new_window.document.write( "		<td>1</td>" );
-			g_new_window.document.write( "		<td>2</td>" );
-			g_new_window.document.write( "		<td>3</td>" );
-			g_new_window.document.write( "	</tr>" );
-			g_new_window.document.write( "	<tr>" );
-			g_new_window.document.write( "		<td>4</td>" );
-			g_new_window.document.write( "		<td>5</td>" );
-			g_new_window.document.write( "		<td>6</td>" );
-			g_new_window.document.write( "	</tr>" );
-			g_new_window.document.write( "</table>" );
-	</script> -->
-</body>
+		<script type="text/javascript">
+			// This is how to write to the first page 
+			document.write( "Content going to the 1st page" );
+		</script>
+	</body>
 </html>
