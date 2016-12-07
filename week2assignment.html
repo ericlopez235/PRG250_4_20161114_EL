@@ -3,12 +3,29 @@
 <head>
 	<title></title>
 	<script type="text/javascript">
-	var g_new_window = (-1);
+		var g_new_window = ( -1 );
+		function generate_table()
+		{
+			window.alert("Hey I am running");
+			
+		}
 	</script>
 </head>
 <body>
 
-	<script type="text/javascript">
+	<form name="theForm">
+		<select>
+		  <option value="+">+</option>
+		  <option value="*">*</option>
+		</select>
+
+		<input type="number" min=0 max=10 step=1 value=0>
+		<input type="button" value="Generate Table" onclick="generate_table()">
+
+	</form>
+
+
+	<!-- <script type="text/javascript">
 	//This is how to write to the first page:
 	document.write( "This belongs to the first page");
 	//How to create a new window:
@@ -36,6 +53,6 @@
 			g_new_window.document.write( "		<td>6</td>" );
 			g_new_window.document.write( "	</tr>" );
 			g_new_window.document.write( "</table>" );
-	</script>
+	</script> -->
 </body>
 </html>
