@@ -17,13 +17,10 @@
 			var expr = selected_number + operation_selection + i2Str;
 			var res = eval( expr );
 			window.alert( expr + " is equal to" + res );
-
 			// window.alert("Hey I am running");
 			g_new_window = window.open( "", "", "", "" );
-
 			// How to write to the new window:
 			g_new_window.document.write( "This belongs to the second page<br/>" );
-
 			// this.style.backgroundColor = "black";
 			// if we want to wipe out the content of the 2nd window brfore writing to it,
 			// let's do this instead
@@ -47,19 +44,34 @@
 <body>
 
 	<form name="theForm">
-		<select>
+		<select name="selection_menu">
 		  <option value="+">+</option>
 		  <option value="*">*</option>
 		</select>
 
-		<input type="number" min=0 max=10 step=1 value=0>
+		<input name="selected_number" type="number" min=0 max=10 step=1 value=0>
 		<input type="button" value="Generate Table" onclick="generate_table()">
 
 	</form>
 
-		<script type="text/javascript">
-			// This is how to write to the first page 
-			document.write( "Content going to the 1st page" );
-		</script>
-	</body>
+<script type="text/javascript">
+	// This is how to write to the first page 
+	document.write( "Content going to the 1st page" );
+	// how to create a new window:
+</script>
+
+			<!-- Let's lean how to generate a 2 by 3 table -->
+<!-- 			<table>
+				<tr>
+					<td>1</td>
+					<td>2</td>
+					<td>3</td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td>5</td>
+					<td>6</td>
+				</tr>
+			</table> -->
+</body>
 </html>
