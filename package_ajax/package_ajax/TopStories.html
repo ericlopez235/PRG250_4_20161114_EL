@@ -7,11 +7,31 @@
     <link href="text.css" rel="stylesheet" type="text/css" />
 
     <script src="TopStories.js" type="text/javascript">
+<<<<<<< Updated upstream
        
+=======
+    </script>
+
+    <script type="text/javascript">
+    function PopulateValues()
+    {
+        var ar = new Array();
+        ar[ 0 ] = "http://my.abcnews.go.com/rsspublic/fp_rss20.xml";
+        ar[ 1 ] = "http://newsrss.bbc.co.uk/rss/newsonline_uk_edition/front_page/rss.xml";
+        ar[ 2 ] = "http://www.cbsnews.com/feeds/rss/main.rss";
+        ar[ 3 ] = "http://rss.cnn.com/rss/cnn_topstories.rss";
+        ar[ 4 ] = "http://rss.msnbc.msn.com/id/3032091/device/rss/rss.xml";
+        ar[ 5 ] = "http://rss.news.yahoo.com/rss/topstories";
+        for( var i = 0; i < g_number_entries; i++ )
+        {
+            document.forms[ 0 ].agency[ i ].value = ar[ i ];
+        }
+    }
+>>>>>>> Stashed changes
     </script>
 
 </head>
-<body onload="newsUpdate()">
+<body onload="PopulateValues()" onload="newsUpdate()">
     <table width="100%" border="0" cellspacing="0" cellpadding="0">
         <tr>
             <td height="45" align="left" valign="top" style="background-image: url('images/top_bg1.gif')">
@@ -35,18 +55,18 @@
                             <table width="100%" border="0" cellspacing="0" cellpadding="0" style="background-image: url('images/but_bg.gif')">
                                 <tr>
                                     <td align="right">
-                                        <img src="IMAGES/but01.gif" width="53" height="22" alt="Visual formatting element" /><img
-                                            src="IMAGES/SPACER.GIF" width="15" height="22" alt="Visual formatting element" /><img
-                                                src="IMAGES/but02.gif" width="79" height="22" alt="Visual formatting element" /><img
-                                                    src="IMAGES/SPACER.GIF" width="15" height="22" alt="Visual formatting element" /><img
-                                                        src="IMAGES/but03.gif" width="79" height="22" alt="Visual formatting element" /><img
-                                                            src="IMAGES/SPACER.GIF" width="15" height="22" alt="Visual formatting element" /><img
-                                                                src="IMAGES/but04.gif" width="76" height="22" alt="Visual formatting element" /><img
-                                                                    src="IMAGES/SPACER.GIF" width="15" height="22" alt="Visual formatting element" /><img
-                                                                        src="IMAGES/but05.gif" width="76" height="22" alt="Visual formatting element" /><img
-                                                                            src="IMAGES/SPACER.GIF" width="15" height="22" alt="Visual formatting element" /><img
-                                                                                src="IMAGES/but06.gif" width="94" height="22" alt="Visual formatting element" /><img
-                                                                                    src="IMAGES/SPACER.GIF" width="50" height="22" alt="Visual formatting element" />
+                                        <img src="IMAGES/but01.gif" width="53" height="22" alt="Visual formatting element" />
+                                        <img src="IMAGES/SPACER.GIF" width="15" height="22" alt="Visual formatting element" />
+                                        <img src="IMAGES/but02.gif" width="79" height="22" alt="Visual formatting element" />
+                                        <img src="IMAGES/SPACER.GIF" width="15" height="22" alt="Visual formatting element" />
+                                        <img src="IMAGES/but03.gif" width="79" height="22" alt="Visual formatting element" />
+                                        <img src="IMAGES/SPACER.GIF" width="15" height="22" alt="Visual formatting element" />
+                                        <img src="IMAGES/but04.gif" width="76" height="22" alt="Visual formatting element" />
+                                        <img src="IMAGES/SPACER.GIF" width="15" height="22" alt="Visual formatting element" />
+                                        <img src="IMAGES/but05.gif" width="76" height="22" alt="Visual formatting element" />
+                                        <img src="IMAGES/SPACER.GIF" width="15" height="22" alt="Visual formatting element" />
+                                        <img src="IMAGES/but06.gif" width="94" height="22" alt="Visual formatting element" />
+                                        <img src="IMAGES/SPACER.GIF" width="50" height="22" alt="Visual formatting element" />
                                     </td>
                                 </tr>
                             </table>
@@ -125,22 +145,22 @@
                                                         <colgroup span="1" width="80%" />
                                                         <tr>
                                                             <td valign="top">
-                                                                <input type="radio" name="agency" value="http://my.abcnews.go.com/rsspublic/fp_rss20.xml"
+                                                                <input type="radio" name="agency" 
                                                                     checked="checked" onclick="newsUpdate()" />
                                                                 ABC News<br />
-                                                                <input type="radio" name="agency" value="http://newsrss.bbc.co.uk/rss/newsonline_uk_edition/front_page/rss.xml"
+                                                                <input type="radio" name="agency" 
                                                                     onclick="newsUpdate()" />
                                                                 BBC<br />
-                                                                <input type="radio" name="agency" value="http://www.cbsnews.com/feeds/rss/main.rss"
+                                                                <input type="radio" name="agency"
                                                                     onclick="newsUpdate()" />
                                                                 CBS News<br />
-                                                                <input type="radio" name="agency" value="http://rss.cnn.com/rss/cnn_topstories.rss"
+                                                                <input type="radio" name="agency" 
                                                                     onclick="newsUpdate()" />
                                                                 CNN<br />
-                                                                <input type="radio" name="agency" value="http://rss.msnbc.msn.com/id/3032091/device/rss/rss.xml"
+                                                                <input type="radio" name="agency" 
                                                                     onclick="newsUpdate()" />
                                                                 MSNBC<br />
-                                                                <input type="radio" name="agency" value="http://rss.news.yahoo.com/rss/topstories"
+                                                                <input type="radio" name="agency" 
                                                                     onclick="newsUpdate()" />
                                                                 Yahoo! News </td>
                                                             <td id="newsCell" valign="top"></td>
